@@ -13,6 +13,14 @@ pause() {
 }
 
 while true; do
+    # Получение публичных IP-адресов (с таймаутом 2 секунды)
+    sys_ipv4=$(curl -s -4 --max-time 2 icanhazip.com || echo "Не назначен")
+    sys_ipv6=$(curl -s -6 --max-time 2 icanhazip.com || echo "Не назначен")
+    
+    # Если curl вернул пустоту (например, сервер без интернета), заменяем на текст
+    [ -z "$sys_ipv4" ] && sys_ipv4="Не назначен"
+    [ -z "$sys_ipv6" ] && sys_ipv6="Не назначен"
+    
     # Сбор системной информации
     sys_uptime=$(uptime -p | sed 's/up //')
     sys_ram=$(free -h | awk '/^Mem:/ {print $3 " / " $2}')
@@ -22,6 +30,8 @@ while true; do
     echo -e "${ORANGE}=========================================${NC}"
     echo -e "               Crank's Script                  "
     echo -e "${ORANGE}=========================================${NC}"
+    echo -e "${ORANGE} IPv4   : ${NC}${sys_ipv4}"
+    echo -e "${ORANGE} IPv6   : ${NC}${sys_ipv6}"
     echo -e "${ORANGE} Аптайм : ${NC}${sys_uptime}"
     echo -e "${ORANGE} RAM    : ${NC}${sys_ram}"
     echo -e "${ORANGE} CPU    : ${NC}${sys_load}"

@@ -15,6 +15,8 @@ echo -e "${ORANGE}[+] Настройка прав доступа...${NC}"
 # Добавлено sudo, чтобы chmod сработал
 sudo chmod +x /usr/local/bin/cs
 
+sudo sed -i -e 's/\r$//' /usr/local/bin/cs
+
 echo -e "${ORANGE}=========================================${NC}"
 echo -e "${ORANGE}Установка успешно завершена!${NC}"
 echo -e "${ORANGE}Теперь введите команду ${NC}cs${ORANGE} для запуска меню.${NC}"

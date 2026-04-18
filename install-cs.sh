@@ -20,11 +20,11 @@ MENU_URL="https://raw.githubusercontent.com/mr-crank/crank-script/refs/heads/mai
 
 # 2. Скачивание скрипта напрямую в системную директорию
 echo -e "${ORANGE}[+] Скачивание скрипта...${NC}"
-curl -sSL "$MENU_URL" -o /usr/local/bin/
+sudo curl -sSL "$MENU_URL" -o /usr/local/bin/
 
 # 3. Выдача прав на выполнение
 echo -e "${ORANGE}[+] Настройка прав доступа...${NC}"
-chmod +x /usr/local/bin/cs
+sudo chmod +x /usr/local/bin/cs
 
 # 4. Завершение
 echo -e "${ORANGE}=========================================${NC}"

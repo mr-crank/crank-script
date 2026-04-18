@@ -1,1 +1,1 @@
-bash <(curl -sSL https://github.com/mr-crank/crank-script/blob/main/install-cs.sh)
+bash <(curl -sSL https://raw.githubusercontent.com/mr-crank/crank-script/main/install-cs.sh)

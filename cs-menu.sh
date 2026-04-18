@@ -12,9 +12,18 @@ pause() {
 }
 
 while true; do
+    # Сбор системной информации
+    sys_uptime=$(uptime -p | sed 's/up //')
+    sys_ram=$(free -h | awk '/^Mem:/ {print $3 " / " $2}')
+    sys_load=$(cat /proc/loadavg | awk '{print $1 ", " $2 ", " $3}')
+
     clear
     echo -e "${ORANGE}=========================================${NC}"
     echo -e "${ORANGE}              Crank's Script             ${NC}"
+    echo -e "${ORANGE}=========================================${NC}"
+    echo -e "${ORANGE} Аптайм : ${NC}${sys_uptime}"
+    echo -e "${ORANGE} RAM    : ${NC}${sys_ram}"
+    echo -e "${ORANGE} CPU    : ${NC}${sys_load}"
     echo -e "${ORANGE}=========================================${NC}"
     echo -e "${ORANGE}1. Обновить систему (apt update/upgrade)${NC}"
     echo -e "${ORANGE}2. Проверить статус брандмауэра (ufw)${NC}"

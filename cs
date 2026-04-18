@@ -14,7 +14,7 @@ pause() {
 while true; do
     clear
     echo -e "${ORANGE}=========================================${NC}"
-    echo -e "${ORANGE}       Меню управления сервером          ${NC}"
+    echo -e "${ORANGE}              Crank's Script             ${NC}"
     echo -e "${ORANGE}=========================================${NC}"
     echo -e "${ORANGE}1. Обновить систему (apt update/upgrade)${NC}"
     echo -e "${ORANGE}2. Проверить статус брандмауэра (ufw)${NC}"

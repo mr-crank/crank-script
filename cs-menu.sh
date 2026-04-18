@@ -30,7 +30,9 @@ while true; do
     echo -e "${ORANGE}3. Запустить Remnawave Reverse${NC}"
     echo -e "${ORANGE}4. Запустить установку Remnawave Reverse${NC}"
     echo -e "${ORANGE}5. IP Region Check${NC}"
-    echo -e "${ORANGE}6. Установить curl и wget${NC}"
+    echo -e "${ORANGE}6. CensorCheck${NC}"
+    echo -e "${ORANGE}7. GeoBlock${NC}"
+    echo -e "${ORANGE}7. Benchmark${NC}"
     echo -e "${ORANGE}0. Выход${NC}"
     echo -e "${ORANGE}=========================================${NC}"
     echo -en "${ORANGE}Выберите действие (0-6): ${NC}"
@@ -60,9 +62,15 @@ while true; do
             pause
             ;;
         6)
-            echo -e "${ORANGE}Установка curl и wget...${NC}"
-            sudo apt update && sudo apt install -y curl wget
-            echo -e "${ORANGE}Установка завершена!${NC}"
+            bash <(wget -qO- https://github.com/vernette/censorcheck/raw/master/censorcheck.sh) --mode dpi
+            pause
+            ;;
+        7)
+            bash <(wget -qO- https://github.com/vernette/censorcheck/raw/master/censorcheck.sh) --mode geoblock
+            pause
+            ;;
+        8)
+            wget -qO- bench.sh | bash
             pause
             ;;
         0)

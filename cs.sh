@@ -1,0 +1,68 @@
+#!/bin/bash
+
+# ANSI код для оранжевого цвета (256 цветов)
+ORANGE='\033[38;5;214m'
+NC='\033[0m' # Сброс цвета (No Color)
+
+# Функция для паузы после выполнения команды
+pause() {
+    echo ""
+    echo -en "${ORANGE}Нажмите Enter для возврата в меню...${NC}"
+    read
+}
+
+while true; do
+    clear
+    echo -e "${ORANGE}=========================================${NC}"
+    echo -e "${ORANGE}       Меню управления сервером          ${NC}"
+    echo -e "${ORANGE}=========================================${NC}"
+    echo -e "${ORANGE}1. Обновить систему (apt update/upgrade)${NC}"
+    echo -e "${ORANGE}2. Проверить статус брандмауэра (ufw)${NC}"
+    echo -e "${ORANGE}3. Запустить Remnawave Reverse${NC}"
+    echo -e "${ORANGE}4. Запустить установку Remnawave Reverse${NC}"
+    echo -e "${ORANGE}5. IP Region Check${NC}"
+    echo -e "${ORANGE}6. Установить curl и wget${NC}"
+    echo -e "${ORANGE}0. Выход${NC}"
+    echo -e "${ORANGE}=========================================${NC}"
+    echo -en "${ORANGE}Выберите действие (0-6): ${NC}"
+    read choice
+
+    case $choice in
+        1)
+            echo -e "${ORANGE}Запуск обновления системы...${NC}"
+            sudo apt update && sudo apt upgrade -y
+            pause
+            ;;
+        2)
+            echo -e "${ORANGE}Статус UFW:${NC}"
+            sudo ufw status
+            pause
+            ;;
+        3)
+            sudo remnawave_reverse
+            pause
+            ;;
+        4)
+            bash <(curl -Ls https://raw.githubusercontent.com/eGamesAPI/remnawave-reverse-proxy/refs/heads/main/install_remnawave.sh)
+            pause
+            ;;
+        5)
+            bash <(wget -qO- https://raw.githubusercontent.com/Davoyan/ipregion/main/ipregion.sh)
+            pause
+            ;;
+        6)
+            echo -e "${ORANGE}Установка curl и wget...${NC}"
+            sudo apt update && sudo apt install -y curl wget
+            echo -e "${ORANGE}Установка завершена!${NC}"
+            pause
+            ;;
+        0)
+            echo -e "${ORANGE}Выход...${NC}"
+            exit 0
+            ;;
+        *)
+            echo -e "${ORANGE}Неверный выбор. Пожалуйста, введите число от 0 до 6.${NC}"
+            sleep 2
+            ;;
+    esac
+done

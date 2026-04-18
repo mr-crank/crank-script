@@ -20,7 +20,7 @@ while true; do
 
     clear
     echo -e "${ORANGE}=========================================${NC}"
-    echo -e "                       Crank's Script                  "
+    echo -e "               Crank's Script                  "
     echo -e "${ORANGE}=========================================${NC}"
     echo -e "${ORANGE} Аптайм : ${NC}${sys_uptime}"
     echo -e "${ORANGE} RAM    : ${NC}${sys_ram}"
@@ -35,7 +35,7 @@ while true; do
     echo -e "${ORANGE}7. GeoBlock${NC}"
     echo -e "${ORANGE}8. Bench${NC}"
     echo -e "${ORANGE}9. IPQuality${NC}"
-    echo -e "${ORANGE}10. Обновитьь скрипт${NC}"
+    echo -e "${ORANGE}10. Обновить скрипт${NC}"
     echo -e "${ORANGE}0. Выход${NC}"
     echo -e "${ORANGE}=========================================${NC}"
     echo -en "${ORANGE}Выберите действие (0-6): ${NC}"

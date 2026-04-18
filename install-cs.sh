@@ -16,7 +16,7 @@ fi
 
 # 1. Ссылка на твой скрипт меню (RAW формат с GitHub)
 # ПРИМЕР: https://raw.githubusercontent.com/Crank/server-menu/main/menu.sh
-MENU_URL="https://github.com/mr-crank/crank-script/blob/main/cs"
+MENU_URL="https://raw.githubusercontent.com/mr-crank/crank-script/refs/heads/main/cs"
 
 # 2. Скачивание скрипта напрямую в системную директорию
 echo -e "${ORANGE}[+] Скачивание скрипта...${NC}"

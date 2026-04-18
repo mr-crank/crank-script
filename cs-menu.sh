@@ -46,6 +46,7 @@ while true; do
     echo -e "${ORANGE}8. Bench${NC}"
     echo -e "${ORANGE}9. IPQuality${NC}"
     echo -e "${ORANGE}10. Обновить скрипт${NC}"
+    echo -e "${ORANGE}11. Установка TeleMT Panel${NC}"
     echo -e "${ORANGE}0. Выход${NC}"
     echo -e "${ORANGE}=========================================${NC}"
     echo -en "${ORANGE}Выберите действие (0-6): ${NC}"
@@ -92,6 +93,10 @@ while true; do
             ;;
         10)
             bash <(curl -sSL https://raw.githubusercontent.com/mr-crank/crank-script/main/install-cs.sh)
+            exit 0
+            ;;
+        11)
+            sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/lost-coder/panvex/main/deploy/install.sh)"
             pause
             ;;
         0)
@@ -99,7 +104,7 @@ while true; do
             exit 0
             ;;
         *)
-            echo -e "${ORANGE}Неверный выбор. Пожалуйста, введите число от 0 до 6.${NC}"
+            echo -e "${ORANGE}Неверный выбор. Пожалуйста, введите число от 0 до 11.${NC}"
             sleep 2
             ;;
     esac

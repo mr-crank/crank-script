@@ -32,7 +32,7 @@ while true; do
     echo -e "${ORANGE}5. IP Region Check${NC}"
     echo -e "${ORANGE}6. CensorCheck${NC}"
     echo -e "${ORANGE}7. GeoBlock${NC}"
-    echo -e "${ORANGE}8. Benchmark${NC}"
+    echo -e "${ORANGE}8. Bench${NC}"
     echo -e "${ORANGE}0. Выход${NC}"
     echo -e "${ORANGE}=========================================${NC}"
     echo -en "${ORANGE}Выберите действие (0-6): ${NC}"

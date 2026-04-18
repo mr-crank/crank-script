@@ -81,7 +81,9 @@ while true; do
             pause
             ;;
         10)
-            
+            bash <(curl -sSL https://raw.githubusercontent.com/mr-crank/crank-script/main/install-cs.sh)
+            pause
+            ;;
         0)
             echo -e "${ORANGE}Выход...${NC}"
             exit 0

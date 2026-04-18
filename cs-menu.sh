@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # ANSI код для оранжевого цвета (256 цветов)
-ORANGE='\033[38;5;214m'
+#ORANGE='\033[38;5;214m'
+ORANGE='\x1b[38;5;172m'
 NC='\033[0m' # Сброс цвета (No Color)
 
 # Функция для паузы после выполнения команды
@@ -19,7 +20,7 @@ while true; do
 
     clear
     echo -e "${ORANGE}=========================================${NC}"
-    echo -e "${ORANGE}              Crank's Script             ${NC}"
+    echo -e "                       Crank's Script                  "
     echo -e "${ORANGE}=========================================${NC}"
     echo -e "${ORANGE} Аптайм : ${NC}${sys_uptime}"
     echo -e "${ORANGE} RAM    : ${NC}${sys_ram}"
@@ -33,6 +34,8 @@ while true; do
     echo -e "${ORANGE}6. CensorCheck${NC}"
     echo -e "${ORANGE}7. GeoBlock${NC}"
     echo -e "${ORANGE}8. Bench${NC}"
+    echo -e "${ORANGE}9. IPQuality${NC}"
+    echo -e "${ORANGE}10. Обновитьь скрипт${NC}"
     echo -e "${ORANGE}0. Выход${NC}"
     echo -e "${ORANGE}=========================================${NC}"
     echo -en "${ORANGE}Выберите действие (0-6): ${NC}"
@@ -73,6 +76,12 @@ while true; do
             wget -qO- bench.sh | bash
             pause
             ;;
+        9)
+            bash <(curl -Ls https://Check.Place) -EI
+            pause
+            ;;
+        10)
+            
         0)
             echo -e "${ORANGE}Выход...${NC}"
             exit 0

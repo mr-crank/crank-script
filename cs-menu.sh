@@ -28,7 +28,7 @@ while true; do
 
     clear
     echo -e "${ORANGE}=========================================${NC}"
-    echo -e "                 Crank's Script                 "
+    echo -e "               Crank's Script                 "
     echo -e "${ORANGE}=========================================${NC}"
     echo -e "${ORANGE} IPv4   : ${NC}${sys_ipv4}"
     echo -e "${ORANGE} IPv6   : ${NC}${sys_ipv6}"

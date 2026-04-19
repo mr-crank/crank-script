@@ -481,15 +481,15 @@ while true; do
 
     #clear
     show_logo
-    echo -e "${ORANGE}===================================================${NC}"
+    echo -e "${ORANGE}==================================================${NC}"
     echo -e "                    Crank's Script                      "
-    echo -e "${ORANGE}===================================================${NC}"
+    echo -e "${ORANGE}==================================================${NC}"
     echo -e "${ORANGE} IPv4   : ${NC}${sys_ipv4}"
     echo -e "${ORANGE} IPv6   : ${NC}${sys_ipv6}"
     echo -e "${ORANGE} Аптайм : ${NC}${sys_uptime}"
     echo -e "${ORANGE} RAM    : ${NC}${sys_ram}"
     echo -e "${ORANGE} CPU    : ${NC}${sys_load}"
-    echo -e "${ORANGE}===================================================${NC}"
+    echo -e "${ORANGE}==================================================${NC}"
     echo -e "${ORANGE}1.  Обновить систему (apt update/upgrade)${NC}"
     echo -e "${ORANGE}2.  Проверить статус брандмауэра (ufw)${NC}"
     echo -e "${ORANGE}3.  Запустить Remnawave Reverse${NC}"
@@ -501,8 +501,9 @@ while true; do
     echo -e "${ORANGE}9.  IPQuality${NC}"
     echo -e "${ORANGE}10. Обновить скрипт${NC}"
     echo -e "${ORANGE}11. Установка TeleMT Panel${NC}"
-    echo -e "${ORANGE}0. Выход${NC}"
-    echo -e "${ORANGE}=========================================${NC}"
+    
+    echo -e "${ORANGE}0.  Выход${NC}"
+    echo -e "${ORANGE}==================================================${NC}"
     echo -en "${ORANGE}Выберите действие (0-6): ${NC}"
     read choice
 

@@ -501,7 +501,7 @@ while true; do
     echo -e "${ORANGE}9.  IPQuality${NC}"
     echo -e "${ORANGE}10. Обновить скрипт${NC}"
     echo -e "${ORANGE}11. Установка TeleMT Panel${NC}"
-    
+    echo -e "${ORANGE} ${NC}"
     echo -e "${ORANGE}0.  Выход${NC}"
     echo -e "${ORANGE}==================================================${NC}"
     echo -en "${ORANGE}Выберите действие (0-6): ${NC}"

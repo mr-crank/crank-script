@@ -453,8 +453,6 @@ EOF_LOGO
     echo -e "\n" # Добавляем отступ после картинки
 }
 
-# ANSI код для оранжевого цвета (256 цветов)
-#ORANGE='\033[38;5;214m'
 ORANGE='\x1b[38;5;172m'
 NC='\033[0m' # Сброс цвета (No Color)
 
@@ -482,7 +480,7 @@ while true; do
     #clear
     show_logo
     echo -e "${ORANGE}==================================================${NC}"
-    echo -e "                    Crank's Script                      "
+    echo -e "                  CRANK'S SCRIPTS                  "
     echo -e "${ORANGE}==================================================${NC}"
     echo -e "${ORANGE} IPv4   : ${NC}${sys_ipv4}"
     echo -e "${ORANGE} IPv6   : ${NC}${sys_ipv6}"

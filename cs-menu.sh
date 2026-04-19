@@ -450,7 +450,6 @@ Mzs0Mm3ilJMbWzM4OzI7MjUxOzE0NzszNDs0ODsyOzI1MjsxNDY7NDNt4pSbG1szODsyOzI0NDsx
 NDE7Mzk7NDg7MjsyNTI7MTQ1OzQ0beKWlxtbMzg7MjsyNTM7MTQzOzM2OzQ4OzI7MjUyOzE0NDs0
 Mm3ilKgbWzBtChtbPzI1aA==
 EOF_LOGO
-    echo -e "\n" # Добавляем отступ после картинки
 }
 
 ORANGE='\x1b[38;5;172m'

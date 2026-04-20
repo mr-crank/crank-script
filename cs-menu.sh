@@ -1,7 +1,6 @@
 #!/bin/bash
 show_logo() {
     clear
-    # Декодируем и выводим логотип из Base64 "на лету"
     base64 -d << "EOF_LOGO"
 G1s/MjVsG1swbRtbMzg7MjsyNTM7MTQ1OzI3OzQ4OzI7MjUzOzE0NzszOW3ilo8bWzM4OzI7MjUz
 OzE0NDszODs0ODsyOzI1MDsxNDM7NDNt4paPG1szODsyOzI1NDsxNDc7Mjg7NDg7MjsyNTE7MTQz
@@ -486,27 +485,23 @@ while true; do
     echo -e "${ORANGE} RAM    : ${NC}${sys_ram}"
     echo -e "${ORANGE} CPU    : ${NC}${sys_load}"
     echo -e "${ORANGE} ${NC}"
-    echo -e "         Проверки"
+    echo -e "Проверки"
     echo -e "${ORANGE}1.  Проверка IP по регионам (IPRegionCheck)${NC}"
     echo -e "${ORANGE}2.  Проверка скорости - Bench.sh Script${NC}"
     echo -e "${ORANGE}3.  Проверка скорости до RU (нужен iperf3)${NC}"
     echo -e "${ORANGE}4.  Проверка CensorCheck${NC}"
     echo -e "${ORANGE}5.  Проверка GeoBlock${NC}"
     echo -e "${ORANGE}6.  Проверка IPQuality${NC}"
-    echo -e 
-    echo -e "         Remnawave"
+    echo -e "Remnawave"
     echo -e "${ORANGE}7.  Запустить Remnawave Reverse${NC}"
     echo -e "${ORANGE}8.  Запустить установку Remnawave Reverse${NC}"
-    echo -e 
-    echo -e "         Прочее"
+    echo -e "Прочее"
     echo -e "${ORANGE}9.  Обновить скрипт${NC}"
     echo -e "${ORANGE}10. Обновить систему (apt update/upgrade)${NC}"
     echo -e "${ORANGE}11. Проверить статус брандмауэра (ufw)${NC}"
     echo -e "${ORANGE}12. Установить iperf3${NC}"
-    echo -e 
-    echo -e "         Telemt MTProto"
+    echo -e "Telemt MTProto"
     echo -e "${ORANGE}13. Установка TeleMT Panel${NC}"
-    echo -e 
     echo -e 
     echo -e "${ORANGE}0.  Выход${NC}"
     echo -e "${ORANGE}==================================================${NC}"

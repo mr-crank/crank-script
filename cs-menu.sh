@@ -498,6 +498,8 @@ while true; do
     echo -e "${ORANGE}9.  IPQuality${NC}"
     echo -e "${ORANGE}10. Обновить скрипт${NC}"
     echo -e "${ORANGE}11. Установка TeleMT Panel${NC}"
+    echo -e "${ORANGE}12. Установить iperf3${NC}"
+    echo -e "${ORANGE}13. Проверка скорости до RU (нужен iperf3)${NC}"
     echo -e "${ORANGE} ${NC}"
     echo -e "${ORANGE}0.  Выход${NC}"
     echo -e "${ORANGE}==================================================${NC}"
@@ -549,6 +551,14 @@ while true; do
             ;;
         11)
             sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/lost-coder/panvex/main/deploy/install.sh)"
+            pause
+            ;;
+        12)
+            apt install iperf3 -y
+            pause
+            ;;
+        13)
+            bash <(wget -qO- https://github.com/itdoginfo/russian-iperf3-servers/raw/main/speedtest.sh)
             pause
             ;;
         0)

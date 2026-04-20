@@ -4,7 +4,7 @@ ORANGE='\033[38;5;214m'
 NC='\033[0m'
 
 echo -e "${ORANGE}=========================================${NC}"
-echo -e "${ORANGE}      Установка Crank's Script           ${NC}"
+echo -e "${ORANGE}      Установка CRANK'S SCRIPTS          ${NC}"
 echo -e "${ORANGE}=========================================${NC}"
 
 echo -e "${ORANGE}[+] Скачивание скрипта...${NC}"

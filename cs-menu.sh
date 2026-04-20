@@ -492,20 +492,20 @@ while true; do
     echo -e "${ORANGE}4.  Проверка CensorCheck${NC}"
     echo -e "${ORANGE}5.  Проверка GeoBlock${NC}"
     echo -e "${ORANGE}6.  Проверка IPQuality${NC}"
-    echo -e "${ORANGE} ${NC}"
-    echo -e "         REMNAWAVE${NC}"
+    echo -e 
+    echo -e "         REMNAWAVE"
     echo -e "${ORANGE}7.  Запустить Remnawave Reverse${NC}"
     echo -e "${ORANGE}8.  Запустить установку Remnawave Reverse${NC}"
-    echo -e "${ORANGE} ${NC}"
-    echo -e "${ORANGE}==================================================${NC}"
+    echo -e 
     echo -e "${ORANGE}9.  Обновить скрипт${NC}"
     echo -e "${ORANGE}10. Обновить систему (apt update/upgrade)${NC}"
     echo -e "${ORANGE}11. Проверить статус брандмауэра (ufw)${NC}"
     echo -e "${ORANGE}12. Установить iperf3${NC}"
-    echo -e "${ORANGE} ${NC}"
-    echo -e "${ORANGE}====Telemt MTProto================================${NC}"
+    echo -e 
+    echo -e "         Telemt MTProto"
     echo -e "${ORANGE}13. Установка TeleMT Panel${NC}"
-    echo -e "${ORANGE} ${NC}"
+    echo -e 
+    echo -e 
     echo -e "${ORANGE}0.  Выход${NC}"
     echo -e "${ORANGE}==================================================${NC}"
     echo -en "${ORANGE}Выберите действие (0-13): ${NC}"

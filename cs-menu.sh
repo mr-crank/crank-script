@@ -493,14 +493,14 @@ while true; do
     echo -e "6.  ${ORANGE}Проверка IPQuality${NC}"
     echo -e
     echo -e "7.  ${ORANGE}Запустить Remnawave Reverse${NC}"
-    echo -e "8.  ${ORANGE}Запустить установку Remnawave Reverse${NC}"
+    echo -e "8.  ${ORANGE}Установить Remnawave Reverse${NC}"
     echo -e
-    echo -e "9.  ${ORANGE}Обновить скрипт${NC}"
-    echo -e "10. ${ORANGE}Обновить систему (apt update/upgrade)${NC}"
-    echo -e "11. ${ORANGE}Проверить статус брандмауэра (ufw)${NC}"
-    echo -e "12. ${ORANGE}Установить iperf3${NC}"
+    echo -e "9.  ${ORANGE}Установка TeleMT Panel${NC}"
     echo -e
-    echo -e "13. ${ORANGE}Установка TeleMT Panel${NC}"
+    echo -e "10. ${ORANGE}Обновить скрипт${NC}"
+    echo -e "11. ${ORANGE}Обновить систему (apt update/upgrade)${NC}"
+    echo -e "12. ${ORANGE}Проверить статус брандмауэра (ufw)${NC}"
+    echo -e
     echo -e
     echo -e "${ORANGE}0.  Выход${NC}"
     echo -e "${ORANGE}==================================================${NC}"
@@ -521,14 +521,10 @@ while true; do
                 echo -e "iperf3 не найден. Начинаем установку..."
                 sudo apt update
                 sudo apt install -y iperf3
-    
-    # Проверяем, успешно ли прошла установка
             if [ $? -eq 0 ]; then
                 echo -e "iperf3 успешно установлен!"
             else
                 echo -e "Ошибка при установке iperf3. Проверьте подключение к сети или права доступа."
-        # Можно добавить выход из функции/скрипта, если iperf3 критичен
-        # return 1 
             fi
             else
                 echo -e "iperf3 уже установлен. Продолжаем работу..."
@@ -557,25 +553,21 @@ while true; do
             pause
             ;;
         9)
+            sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/lost-coder/panvex/main/deploy/install.sh)"
+            pause
+            ;;
+        10)
             bash <(curl -sSL https://raw.githubusercontent.com/mr-crank/crank-script/main/install-cs.sh)
             exit 0
             ;;
-        10)
+        11)
             echo -e "${ORANGE}Запуск обновления системы...${NC}"
             sudo apt update && sudo apt upgrade -y
             pause
             ;;
-        11)
+        12)
             echo -e "${ORANGE}Статус UFW:${NC}"
             sudo ufw status
-            pause
-            ;;
-        12)
-            apt install iperf3 -y
-            pause
-            ;;
-        13)
-            sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/lost-coder/panvex/main/deploy/install.sh)"
             pause
             ;;
         0)
@@ -583,7 +575,7 @@ while true; do
             exit 0
             ;;
         *)
-            echo -e "${ORANGE}Неверный выбор. Пожалуйста, введите число от 0 до 13.${NC}"
+            echo -e "${ORANGE}Неверный выбор. Пожалуйста, введите число от 0 до 12.${NC}"
             sleep 2
             ;;
     esac

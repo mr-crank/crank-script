@@ -487,7 +487,7 @@ while true; do
     echo -e "${ORANGE} ${NC}"
     echo -e "1.  ${ORANGE}Проверка IP по регионам (IPRegionCheck)${NC}"
     echo -e "2.  ${ORANGE}Проверка скорости - Bench.sh Script${NC}"
-    echo -e "3.  ${ORANGE}Проверка скорости до RU (нужен iperf3)${NC}"
+    echo -e "3.  ${ORANGE}Проверка скорости до RU (iPerf3)${NC}"
     echo -e "4.  ${ORANGE}Проверка CensorCheck${NC}"
     echo -e "5.  ${ORANGE}Проверка GeoBlock${NC}"
     echo -e "6.  ${ORANGE}Проверка IPQuality${NC}"
@@ -495,7 +495,7 @@ while true; do
     echo -e "7.  ${ORANGE}Запустить Remnawave Reverse${NC}"
     echo -e "8.  ${ORANGE}Установить Remnawave Reverse${NC}"
     echo -e
-    echo -e "9.  ${ORANGE}Установка TeleMT Panel${NC}"
+    echo -e "9.  ${ORANGE}Установить TeleMT Panel${NC}"
     echo -e
     echo -e "10. ${ORANGE}Обновить скрипт${NC}"
     echo -e "11. ${ORANGE}Обновить систему (apt update/upgrade)${NC}"

@@ -546,7 +546,7 @@ while true; do
             pause
             ;;
         7)
-            
+            curl -sL yabs.sh | bash -s -- -4
         8)
             sudo remnawave_reverse
             pause

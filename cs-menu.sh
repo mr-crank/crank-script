@@ -491,15 +491,16 @@ while true; do
     echo -e "4.  ${ORANGE}Проверка CensorCheck${NC}"
     echo -e "5.  ${ORANGE}Проверка GeoBlock${NC}"
     echo -e "6.  ${ORANGE}Проверка IPQuality${NC}"
+    echo -e "7.  ${ORANGE}Проверка Yet-Another-Bench-Script${NC}"
     echo -e
-    echo -e "7.  ${ORANGE}Запустить Remnawave Reverse${NC}"
-    echo -e "8.  ${ORANGE}Установить Remnawave Reverse${NC}"
+    echo -e "8.  ${ORANGE}Запустить Remnawave Reverse${NC}"
+    echo -e "9.  ${ORANGE}Установить Remnawave Reverse${NC}"
     echo -e
-    echo -e "9.  ${ORANGE}Установить TeleMT Panel${NC}"
+    echo -e "10. ${ORANGE}Установить TeleMT Panel${NC}"
     echo -e
-    echo -e "10. ${ORANGE}Обновить скрипт${NC}"
-    echo -e "11. ${ORANGE}Обновить систему (apt update/upgrade)${NC}"
-    echo -e "12. ${ORANGE}Проверить статус брандмауэра (ufw)${NC}"
+    echo -e "11. ${ORANGE}Обновить скрипт${NC}"
+    echo -e "12. ${ORANGE}Обновить систему (apt update/upgrade)${NC}"
+    echo -e "13. ${ORANGE}Проверить статус брандмауэра (ufw)${NC}"
     echo -e
     echo -e
     echo -e "${ORANGE}0.  Выход${NC}"
@@ -545,27 +546,29 @@ while true; do
             pause
             ;;
         7)
+            
+        8)
             sudo remnawave_reverse
             pause
             ;;
-        8)
+        9)
             bash <(curl -Ls https://raw.githubusercontent.com/eGamesAPI/remnawave-reverse-proxy/refs/heads/main/install_remnawave.sh)
             pause
             ;;
-        9)
+        10)
             sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/lost-coder/panvex/main/deploy/install.sh)"
             pause
             ;;
-        10)
+        11)
             bash <(curl -sSL https://raw.githubusercontent.com/mr-crank/crank-script/main/install-cs.sh)
             exit 0
             ;;
-        11)
+        12)
             echo -e "${ORANGE}Запуск обновления системы...${NC}"
             sudo apt update && sudo apt upgrade -y
             pause
             ;;
-        12)
+        13)
             echo -e "${ORANGE}Статус UFW:${NC}"
             sudo ufw status
             pause
@@ -575,7 +578,7 @@ while true; do
             exit 0
             ;;
         *)
-            echo -e "${ORANGE}Неверный выбор. Пожалуйста, введите число от 0 до 12.${NC}"
+            echo -e "${ORANGE}Неверный выбор. Пожалуйста, введите число от 0 до 13.${NC}"
             sleep 2
             ;;
     esac

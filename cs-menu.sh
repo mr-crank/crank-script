@@ -517,6 +517,22 @@ while true; do
             pause
             ;;
         3)
+            if ! command -v iperf3 &> /dev/null; then
+                echo -e "iperf3 не найден. Начинаем установку..."
+                sudo apt update
+                sudo apt install -y iperf3
+    
+    # Проверяем, успешно ли прошла установка
+            if [ $? -eq 0 ]; then
+                echo -e "iperf3 успешно установлен!"
+            else
+                echo -e "Ошибка при установке iperf3. Проверьте подключение к сети или права доступа."
+        # Можно добавить выход из функции/скрипта, если iperf3 критичен
+        # return 1 
+            fi
+            else
+                echo -e "iperf3 уже установлен. Продолжаем работу..."
+            fi
             bash <(wget -qO- https://github.com/itdoginfo/russian-iperf3-servers/raw/main/speedtest.sh)
             pause
             ;;

@@ -558,7 +558,7 @@ while true; do
             pause
             ;;
         10)
-            sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/lost-coder/panvex/main/deploy/install.sh)"
+            curl -fsSL https://raw.githubusercontent.com/amirotin/telemt_panel/main/install.sh | bash
             pause
             ;;
         11)

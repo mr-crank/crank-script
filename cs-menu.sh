@@ -496,7 +496,7 @@ while true; do
     echo -e "8.  ${ORANGE}Запустить Remnawave Reverse${NC}"
     echo -e "9.  ${ORANGE}Установить Remnawave Reverse${NC}"
     echo -e
-    echo -e "10. ${ORANGE}Установить TeleMT Panel${NC}"
+    echo -e "10. ${ORANGE}Установить/обновить MEKO MTProto${NC}"
     echo -e
     echo -e "11. ${ORANGE}Обновить скрипт${NC}"
     echo -e "12. ${ORANGE}Обновить систему (apt update/upgrade)${NC}"
@@ -558,7 +558,7 @@ while true; do
             pause
             ;;
         10)
-            curl -fsSL https://raw.githubusercontent.com/amirotin/telemt_panel/main/install.sh | bash
+            curl -fsSL https://raw.githubusercontent.com/Mekotofeuka/MTPROTO_FIX_By_MEKO/main/install.sh | sudo bash
             pause
             ;;
         11)
